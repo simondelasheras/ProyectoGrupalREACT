@@ -70,24 +70,24 @@ export default function Home() {
     },
   ];
 
-return (
-  <div className="home-div">
-    <h1>Calzado</h1>
-    <div className="cards-list">
-      {cards.map((card) => (
-        <div key={card.id} className="card">
-          <Card
-            name={card.name}
-            id={card.id}
-            patent={card.patent}
-            type={card.type}
-            price={card.price}
-            imageName={card.imageName}
-          />
-          <Button /> {/* Agrega el botón de compra aquí */}
-        </div>
-      ))}
+  return (
+    <div className="home-div">
+      <h1>Calzado</h1>
+      <div className="cards-list">
+        {cards.map((card) => (
+          <div key={card.id} className="card">
+            <Card
+              name={card.name}
+              id={card.id}
+              patent={card.patent}
+              type={card.type}
+              price={card.price}
+              imageName={card.imageName}
+            />
+            <Button /> {}
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 }
