@@ -42,30 +42,10 @@
   font-weight: 700;
   border-style: none;
   background-color: rgb(212, 150, 50);
-  margin-top: 0.2em;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-.btn-container:hover {
-  background-color: black;
-  color: white;
-}
-
-
-.btn-container:active {
-  background-color: #a97b2d;
-  transform: translateY(0.4em);
-}
-
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-
-
-
