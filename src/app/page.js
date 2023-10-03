@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "@/components/Card";
+import Button from "@/components/Button";
 
 export default function Home() {
   const cards = [
@@ -69,13 +70,13 @@ export default function Home() {
     },
   ];
 
-  return (
-    <div className="home-div">
-      <h1>Calzado</h1>
-      <div className="cards-list">
-        {cards.map((card) => (
+return (
+  <div className="home-div">
+    <h1>Calzado</h1>
+    <div className="cards-list">
+      {cards.map((card) => (
+        <div key={card.id} className="card">
           <Card
-            key={card.id}
             name={card.name}
             id={card.id}
             patent={card.patent}
@@ -83,8 +84,10 @@ export default function Home() {
             price={card.price}
             imageName={card.imageName}
           />
-        ))}
-      </div>
+          <Button /> {/* Agrega el botón de compra aquí */}
+        </div>
+      ))}
     </div>
-  );
+  </div>
+);
 }
