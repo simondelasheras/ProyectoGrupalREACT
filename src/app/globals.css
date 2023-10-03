@@ -19,31 +19,31 @@
   justify-content: space-between;
   align-items: center;
   background-color: beige;
-  border-radius: 10px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  width: 250px;
-  height: 350px;
-  margin: 10px;
+  border-radius: 1.5em;
+  box-shadow: 0px 1.5em 3em rgba(0, 0, 0, 0.3);
+  width: 16em;
+  height: 22em;
+  margin: 0.8em 1.5em 0.8em 1.5em; /* Ajustado para reducir el margen inferior y superior */
   overflow: hidden;
 }
 
 .card-container img {
   width: 100%;
-  height: auto;
-  max-height: 50%;
-  border-radius: 10px 10px 0 0;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 1.5em 1.5em 0 0;
 }
 
 .btn-container {
-  height: 40px;
-  width: 200px;
-  border-radius: 10px;
+  height: 3em;
+  width: 12em;
+  border-radius: 1.5em;
   color: white;
   font-weight: 700;
   border-style: none;
   background-color: rgb(212, 150, 50);
+  margin-top: 0.2em; /* Ajustado para reducir el margen superior */
 }
-
 
 .card {
   display: flex;

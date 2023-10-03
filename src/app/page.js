@@ -72,7 +72,7 @@ export default function Home() {
 
 return (
   <div className="home-div">
-    <h1>Calzado</h1>
+    <h1>Mujer</h1>
     <div className="cards-list">
       {cards.map((card) => (
         <div key={card.id} className="card">
