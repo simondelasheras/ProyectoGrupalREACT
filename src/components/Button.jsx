@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import styles from '@/components/Button-cards/buttonOrange.css'; 
+import styles from '@/components/Button-cards/buttonOrange.module.css'; 
 
 function Button() {
   const [buttonState, setButtonState] = useState({color: styles.buttonBlue, text: 'Agregar al carrito'});
@@ -10,7 +10,7 @@ function Button() {
      setButtonState({color: styles.buttonGreen, text: 'Agregado!'});
 
      setTimeout(() => {
-       setButtonState({color: styles.buttonOrange, text: 'Agregar al carrito'});
+       setButtonState({color: styles.buttonBlue, text: 'Agregar al carrito'});
      }, 3000);
    };
 

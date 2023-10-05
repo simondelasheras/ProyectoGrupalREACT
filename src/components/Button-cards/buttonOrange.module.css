@@ -1,0 +1,21 @@
+.buttonBlue {
+  height: 3em;
+  width: 12em;
+  border-radius: 1.5em;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  background-color: rgb(212, 150, 50);
+  margin-top: 0.2em;
+}
+
+.buttonGreen {
+  height: 3em;
+  width: 12em;
+  border-radius: 1.5em;
+  color: white;
+  font-weight: 700;
+  border-style: none;
+  background-color: rgb(35, 211, 61);
+  margin-top: 0.2em;
+}
