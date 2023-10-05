@@ -1,0 +1,68 @@
+.h1-bienvenida {
+    color: orange;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15%;
+    padding-right: 5%;
+}
+
+
+.parrafo-bienvenida {
+    color: #ffffff; 
+    font-size: x-large;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-1 {
+    margin-bottom: 40%;
+    height: 3em;
+    width: 12em;
+    border-radius: 1.5em;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(212, 169, 50, 0.876);;
+    margin-top: 0.2em;
+}
+
+.btn-2 {
+    margin-bottom: 40%;
+    height: 3em;
+    width: 12em;
+    border-radius: 1.5em;
+    color: white;
+    font-weight: 700;
+    background-color: rgb(212, 169, 50, 0.876);
+    margin-top: 0.2em;
+}
+
+.parrafo {
+    margin-right: 50%;
+    margin-top: 20%;
+}
+
+.h1-button {
+    color: rgba(186, 153, 86, 0.955);
+}
+
+.h2-button {
+    color: rgb(234, 227, 229);
+}
+
+.btn-3 {
+    height: 3em;
+    width: 8em;
+    border-radius: 1.5em;
+    color: white;
+    font-weight: 700;
+    background-color: #ffd700;
+    margin-top: 0.2em;
+}
+
+
+
+
