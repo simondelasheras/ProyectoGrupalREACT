@@ -1,23 +1,24 @@
 'use client'
+
 import React, { useState } from 'react';
+import styles from '@/components/Button-cards/buttonOrange.css'; 
 
 function Button() {
-
-  const [buttonState, setButtonState] = useState({color: 'blue', text: 'Agregar al carrito'});
+  const [buttonState, setButtonState] = useState({color: styles.buttonBlue, text: 'Agregar al carrito'});
 
    const handleClick = () => {
-     setButtonState({color: 'green', text: 'Agregado!'});
+     setButtonState({color: styles.buttonGreen, text: 'Agregado!'});
 
      setTimeout(() => {
-       setButtonState({color: 'blue', text: 'Agregar al carrito'});
+       setButtonState({color: styles.buttonOrange, text: 'Agregar al carrito'});
      }, 3000);
    };
 
    return (
-     <button style={{ backgroundColor: buttonState.color }} onClick={handleClick}>
+     <button className={buttonState.color} onClick={handleClick}>
        {buttonState.text}
      </button>
    );
 }
 
-export default Button
+export default Button;
