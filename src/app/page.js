@@ -1,8 +1,27 @@
 import React from "react";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import 'bootstrap/dist/css/bootstrap.css';
+import Image from "next/image"
+
 
 export default function Home() {
+
+  return (
+    <div>
+      
+      <Navbar/>
+      <Footer/>
+      
+
+    </div>)
+    
+
+
+
+
   const cards = [
     {
       id: "1",
@@ -89,5 +108,7 @@ return (
       ))}
     </div>
   </div>
+
+
 );
 }
