@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
+import ShoppingCart from "@/components/ShoppingCart";
 
 export default function Home() {
   const cards = [
@@ -11,6 +12,7 @@ export default function Home() {
       type: "Entrenamiento",
       price: "$ 7.500",
       imageName: "remera-topper-entrenamiento-mujer.jpg",
+      gender: "Women",
     },
     {
       id: "2",
@@ -19,6 +21,7 @@ export default function Home() {
       type: "Running",
       price: "$ 24.000",
       imageName: "zapatillas-adidas-women-2.png",
+      gender: "Women",
     },
     {
       id: "3",
@@ -27,6 +30,7 @@ export default function Home() {
       type: "Running",
       price: "$ 25.000",
       imageName: "adidas1.jpg",
+      gender: "Women",
     },
     {
       id: "4",
@@ -35,6 +39,7 @@ export default function Home() {
       type: "Entrenamiento",
       price: "$ 6.000",
       imageName: "under-armor-calza.jpg",
+      gender: "Women",
     },
     {
       id: "5",
@@ -43,6 +48,7 @@ export default function Home() {
       type: "Running",
       price: "$ 24.000",
       imageName: "nike2.jpg",
+      gender: "Women",
     },
     {
       id: "6",
@@ -51,6 +57,7 @@ export default function Home() {
       type: "Running",
       price: "$ 26.000",
       imageName: "zapatillas-adidas-women-3.png",
+      gender: "Women",
     },
     {
       id: "7",
@@ -59,6 +66,7 @@ export default function Home() {
       type: "Running",
       price: "$ 25.000",
       imageName: "zapatillas-adidas-women-1.png",
+      gender: "Women",
     },
     {
       id: "8",
@@ -67,6 +75,7 @@ export default function Home() {
       type: "Running",
       price: "$ 24.000",
       imageName: "nike3.jpg",
+      gender: "Women",
     },
     {
       id: "9",
@@ -75,6 +84,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 50.000",
       imageName: "remera1.jpg",
+      gender: "Men",
     },
     {
       id: "10",
@@ -83,6 +93,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 50.000",
       imageName: "remera2.jpg",
+      gender: "Men",
     },
     {
       id: "11",
@@ -91,6 +102,7 @@ export default function Home() {
       type: "Running",
       price: "$ 50.000",
       imageName: "remera3.jpg",
+      gender: "Men",
     },
     {
       id: "12",
@@ -99,6 +111,7 @@ export default function Home() {
       type: "Fitness",
       price: "$ 50.000",
       imageName: "remera4.jpg",
+      gender: "Men",
     },
     {
       id: "13",
@@ -107,6 +120,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 60.000",
       imageName: "buzo1.jpg",
+      gender: "Men",
     },
     {
       id: "14",
@@ -115,6 +129,7 @@ export default function Home() {
       type: "Fitness",
       price: "$ 60.000",
       imageName: "buzo2.jpg",
+      gender: "Men",
     },
     {
       id: "15",
@@ -123,6 +138,7 @@ export default function Home() {
       type: "Fitness",
       price: "$ 60.000",
       imageName: "buzo3.jpg",
+      gender: "Men",
     },
     {
       id: "16",
@@ -131,6 +147,7 @@ export default function Home() {
       type: "Fitness",
       price: "$ 60.000",
       imageName: "buzo4.jpg",
+      gender: "Men",
     },
     {
       id: "17",
@@ -139,6 +156,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 40.000",
       imageName: "short1.jpg",
+      gender: "Men",
     },
     {
       id: "18",
@@ -147,6 +165,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 40.000",
       imageName: "short2.jpg",
+      gender: "Men",
     },
     {
       id: "19",
@@ -155,6 +174,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 40.000",
       imageName: "short3.jpg",
+      gender: "Men",
     },
     {
       id: "20",
@@ -163,6 +183,7 @@ export default function Home() {
       type: "Fitness",
       price: "$ 40.000",
       imageName: "short4.jpg",
+      gender: "Men",
     },
     {
       id: "21",
@@ -171,6 +192,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 55.000",
       imageName: "pantalon1.jpg",
+      gender: "Men",
     },
     {
       id: "22",
@@ -179,6 +201,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 55.000",
       imageName: "pantalon2.jpg",
+      gender: "Men",
     },
     {
       id: "23",
@@ -187,6 +210,7 @@ export default function Home() {
       type: "Fútbol",
       price: "$ 55.000",
       imageName: "pantalon3.jpg",
+      gender: "Men",
     },
     {
       id: "24",
@@ -195,27 +219,50 @@ export default function Home() {
       type: "Fitness",
       price: "$ 55.000",
       imageName: "pantalon4.jpg",
+      gender: "Men",
     },
   ];
 
-return (
-  <div className="home-div">
-    <h1>Calzado</h1>
-    <div className="cards-list">
-      {cards.map((card) => (
-        <div key={card.id} className="card">
-          <Card
-            name={card.name}
-            id={card.id}
-            patent={card.patent}
-            type={card.type}
-            price={card.price}
-            imageName={card.imageName}
-          />
-          <Button /> {/* Agrega el botón de compra aquí */}
+  const filteredWomenCards = cards.filter((card) => card.gender === "Women");
+  const filteredMenCards = cards.filter((card) => card.gender === "Men");
+
+  return (
+    <div className="home-div">
+      <div className="home-women" id="section-women">
+        <h1>WOMEN</h1>
+        <div className="cards-list">
+          {filteredWomenCards.map((card) => (
+            <div key={card.id} className="card">
+              <Card
+                name={card.name}
+                id={card.id}
+                patent={card.patent}
+                type={card.type}
+                price={card.price}
+                imageName={card.imageName}
+              />
+              <Button />
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
+      <h1>MEN</h1>
+      <div className="cards-list">
+        {filteredMenCards.map((card) => (
+          <div key={card.id} className="card">
+            <Card
+              name={card.name}
+              id={card.id}
+              patent={card.patent}
+              type={card.type}
+              price={card.price}
+              imageName={card.imageName}
+            />
+            <Button /> {/* Agrega el botón de compra aquí */}
+          </div>
+        ))}
+      </div>
+      <div>{/*<ShoppingCart/>*/}</div>
     </div>
-  </div>
-);
+  );
 }

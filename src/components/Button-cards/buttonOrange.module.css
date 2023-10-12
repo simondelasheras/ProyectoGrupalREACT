@@ -19,3 +19,14 @@
   background-color: rgb(35, 211, 61);
   margin-top: 0.2em;
 }
+
+.btn-container:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.btn-container:active {
+  background-color: #a97b2d;
+  transform: translateY(0.4em);
+}

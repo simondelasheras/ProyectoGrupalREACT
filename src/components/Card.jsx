@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from './Image';
 
-const Card = ({ id, name, patent, type, price, imageName }) => {
+const Card = ({ id, name, patent, type, price, imageName, gender }) => {
   const imageUrl = `/images/${imageName}`;
 
   return (
@@ -12,6 +12,7 @@ const Card = ({ id, name, patent, type, price, imageName }) => {
         <p>Marca: {patent}</p>
         <p>{type}</p>
         <p>{price}</p>
+        <p>{gender}</p>
       </div>
       <div>
         <Image src={imageUrl} alt={`Imagen para ${name}`} />
