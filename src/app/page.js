@@ -6,6 +6,22 @@ export default function Home() {
   const cards = [
     {
       id: "1",
+      name: "Remera",
+      patent: "Topper",
+      type: "Entrenamiento",
+      price: "$ 7.500",
+      imageName: "remera-topper-entrenamiento-mujer.jpg",
+    },
+    {
+      id: "2",
+      name: "Zapatillas",
+      patent: "Adidas",
+      type: "Running",
+      price: "$ 24.000",
+      imageName: "zapatillas-adidas-women-2.png",
+    },
+    {
+      id: "3",
       name: "Zapatillas",
       patent: "Adidas",
       type: "Running",
@@ -13,28 +29,12 @@ export default function Home() {
       imageName: "adidas1.jpg",
     },
     {
-      id: "2",
-      name: "Zapatillas",
-      patent: "Nike",
-      type: "Running",
-      price: "$ 24.000",
-      imageName: "nike1.jpg",
-    },
-    {
-      id: "3",
-      name: "Zapatillas",
-      patent: "Puma",
-      type: "Running",
-      price: "$ 26.000",
-      imageName: "puma1.jpg",
-    },
-    {
       id: "4",
-      name: "Zapatillas",
-      patent: "Adidas",
-      type: "Running",
-      price: "$ 25.000",
-      imageName: "adidas2.jpg",
+      name: "Calza",
+      patent: "Under Armor",
+      type: "Entrenamiento",
+      price: "$ 6.000",
+      imageName: "under-armor-calza.jpg",
     },
     {
       id: "5",
@@ -47,10 +47,10 @@ export default function Home() {
     {
       id: "6",
       name: "Zapatillas",
-      patent: "Puma",
+      patent: "Adidas",
       type: "Running",
       price: "$ 26.000",
-      imageName: "puma2.jpg",
+      imageName: "zapatillas-adidas-women-3.png",
     },
     {
       id: "7",
@@ -58,7 +58,7 @@ export default function Home() {
       patent: "Adidas",
       type: "Running",
       price: "$ 25.000",
-      imageName: "adidas3.jpg",
+      imageName: "zapatillas-adidas-women-1.png",
     },
     {
       id: "8",
@@ -200,7 +200,7 @@ export default function Home() {
 
 return (
   <div className="home-div">
-    <h1>Men</h1>
+    <h1>Calzado</h1>
     <div className="cards-list">
       {cards.map((card) => (
         <div key={card.id} className="card">
