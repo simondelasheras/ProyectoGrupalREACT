@@ -44,6 +44,17 @@
   background-color: rgb(212, 150, 50);
 }
 
+.btn-container:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.btn-container:active {
+  background-color: #a97b2d;
+  transform: translateY(0.4em);
+}
+
 .card {
   display: flex;
   flex-direction: column;
