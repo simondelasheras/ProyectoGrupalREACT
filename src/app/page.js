@@ -355,13 +355,13 @@ export default function Home() {
 
   return (
     <div className="home-div">
-      <div className="home-women" id="section-women">
+      <div className="home-women cards-list-women" id="section-women">
         <h1>WOMEN</h1>
         {renderCategoryCards("Top", filteredWomenCards)}
         {renderCategoryCards("Bottom", filteredWomenCards)}
         {renderCategoryCards("Shoes", filteredWomenCards)}
       </div>
-      <div className="home-men" id="section-men">
+      <div className="home-men cards-list-men" id="section-men">
         <h1>MEN</h1>
         {renderCategoryCards("Top", filteredMenCards)}
         {renderCategoryCards("Bottom", filteredMenCards)}
