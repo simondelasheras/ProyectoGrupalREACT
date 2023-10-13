@@ -1,24 +1,44 @@
 'use client'
 
-import React, { useState } from 'react';
-import styles from '@/components/Button-cards/buttonOrange.module.css'; 
+import React, { useState, useEffect } from 'react';
+import styles from '@/components/Button-cards/buttonOrange.module.css';
 
 function Button() {
-  const [buttonState, setButtonState] = useState({color: styles.buttonBlue, text: 'Agregar al carrito'});
+  const [buttonState, setButtonState] = useState({
+    active: false,
+  });
 
-   const handleClick = () => {
-     setButtonState({color: styles.buttonGreen, text: 'Agregado!'});
+  useEffect(() => {
+    let timeout;
 
-     setTimeout(() => {
-       setButtonState({color: styles.buttonBlue, text: 'Agregar al carrito'});
-     }, 3000);
-   };
+    if (buttonState.active) {
+      timeout = setTimeout(() => {
+        setButtonState({
+          active: false,
+        });
+      }, 1000); // Ajuste el tiempo de espera aquí
+    }
 
-   return (
-     <button className={buttonState.color} onClick={handleClick}>
-       {buttonState.text}
-     </button>
-   );
+    return () => clearTimeout(timeout);
+  }, [buttonState.active]);
+
+  const handleClick = () => {
+    setButtonState({
+      active: true,
+    });
+  };
+
+  return (
+    <button
+      className={`${styles.button} ${buttonState.active ? styles.active : ''}`}
+      onClick={handleClick}
+    >
+      {buttonState.active ? 'Agregado!' : 'Agregar al carrito'}
+    </button>
+  );
 }
 
 export default Button;
+
+
+

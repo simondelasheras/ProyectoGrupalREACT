@@ -1,32 +1,29 @@
-.buttonBlue {
+.button {
   height: 3em;
   width: 12em;
   border-radius: 1.5em;
   color: white;
   font-weight: 700;
   border-style: none;
-  background-color: rgb(212, 150, 50);
   margin-top: 0.2em;
+  transition: background-color 0.2s, transform 0.2s; /* Ajuste la duración aquí */
+  background-color: rgb(212, 150, 50);  /* Color inicial */
 }
 
 .buttonGreen {
-  height: 3em;
-  width: 12em;
-  border-radius: 1.5em;
-  color: white;
-  font-weight: 700;
-  border-style: none;
   background-color: rgb(35, 211, 61);
-  margin-top: 0.2em;
 }
 
-.btn-container:hover {
+/* Efecto Hover y Active */
+.button:not(.active):hover {
   background-color: black;
   color: white;
 }
 
-
-.btn-container:active {
-  background-color: #a97b2d;
-  transform: translateY(0.4em);
+.button.active {
+  background-color: rgb(35, 211, 61);
+  color: white;
+  transform: translateY(0.2em);
 }
+
+
