@@ -6,15 +6,15 @@
   font-weight: 700;
   border-style: none;
   margin-top: 0.2em;
-  transition: background-color 0.2s, transform 0.2s; /* Ajuste la duración aquí */
-  background-color: rgb(212, 150, 50);  /* Color inicial */
+  transition: background-color 0.2s, transform 0.2s;
+  background-color: rgb(212, 150, 50);
 }
 
 .buttonGreen {
   background-color: rgb(35, 211, 61);
 }
 
-/* Efecto Hover y Active */
+
 .button:not(.active):hover {
   background-color: black;
   color: white;
