@@ -1,54 +1,90 @@
-/* ... Otras reglas de estilo ... */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
 
 .cards-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0;
 }
 
-.cards-list-men {
-  background: lightblue; /* Cambia este color por el azul que desees */
-}
-
-.cards-list-women {
-  background: pink; /* Cambia este color por el azul que desees */
+/* Aumentamos el margen inferior en .cards-list */
+.cards-list {
+    margin-bottom: 3em; /* Ajusta según sea necesario */
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background-color: beige;
-  border-radius: 1.5em;
-  box-shadow: 0px 1.5em 3em rgba(0, 0, 0, 0.3);
-  width: 16em;
-  height: 22em;
-  margin: 0.8em 1.5em 0.8em 1.5em; /* Ajustado para reducir el margen inferior y superior */
-  overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: beige;
+    border-radius: 1.5em;
+    box-shadow: 0px 1.5em 3em rgba(0, 0, 0, 0.3);
+    width: 16em;
+    height: 22em;
+    margin: 0.8em;
+    overflow: hidden;
 }
 
 .card-container img {
-  width: 100%;
-  height: 50%;
-  object-fit: cover;
-  border-radius: 1.5em 1.5em 0 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 1.5em;
 }
 
 .btn-container:hover {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 .btn-container:active {
-  background-color: #a97b2d;
-  transform: translateY(0.4em);
+    background-color: #a97b2d;
+    transform: translateY(0.4em);
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
+/* Ajustar el margen de las secciones específicas */
+.cards-list-men,
+.cards-list-women {
+    margin-top: 0;
+}
+
+.cards-list-men {
+    background: lightblue;
+}
+
+.cards-list-women {
+    background: pink;
+}
+
+/* Ajustes para las secciones Women y Men */
+.cards-list-women,
+.cards-list-men {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Si las secciones son divs, podrías intentar eliminar márgenes y padding también */
+.cards-list-women,
+.cards-list-men,
+.cards-list-women > div,
+.cards-list-men > div {
+    margin: 0;
+    padding: 0;
+}
+
+
+
 
