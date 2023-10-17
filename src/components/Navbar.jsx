@@ -5,6 +5,8 @@ import styled from "styled-components"
 import BurgerButton from "./BurgerButton"
 import Image from "next/image"
 import logo from "../../public/images/logo.jpeg"
+import { NavDropdown } from "react-bootstrap"
+
 
 
 
@@ -18,17 +20,49 @@ function Navbar() {
         <>
         <NavContainer>
           <div>
-            <Image src={logo} alt="Gym" height={200} width={200}></Image>
+            <Image className="img" src={logo} alt="Gym" height={200} width={200}></Image>
           </div>
-            <h2>Power <span>Sport</span></h2>
+   
+
+
             <div className={`links ${clicked ? 'active' : ''}`}>
+<ul className="permalinks"> 
+
+
               <a href="/">Home</a>
-              <a href="/">Shop</a>
-              <a href="/">About</a>
-              <a href="/">Rutin</a>
+              <NavDropdown title= "Shops">
+<NavDropdown.Item href="Products/man">Man</NavDropdown.Item>
+<NavDropdown.Item href="Products/women">Women</NavDropdown.Item>
+
+</NavDropdown>
+
+
+
+              <NavDropdown title= "Abouts">
+<NavDropdown.Item href="Products/us">Us</NavDropdown.Item>
+</NavDropdown>
+
+<NavDropdown title= "Rutin">
+<NavDropdown.Item href="Products/tea">Tea</NavDropdown.Item>
+<NavDropdown.Item href="Products/coffe">Coffe</NavDropdown.Item>
+<NavDropdown.Item href="Products/chocolate">Chocolate</NavDropdown.Item>
+</NavDropdown>
+
+              
               <a href="/">Contact</a>
-               
+              </ul>
             </div>
+
+           
+
+
+
+
+
+
+
+
+
             <div className="burger"> 
             <BurgerButton clicked={clicked} handleClick={handleClick} />
             </div>
@@ -44,14 +78,9 @@ function Navbar() {
 export default Navbar
 
 
+
 const NavContainer = styled.nav`
-h2{
-    color: white;
-    font-weight: 400;
-    span {
-      font-weight: bold;
-    }
- } 
+
 padding: 4rem;
 background-color: black;
 display:flex;
@@ -62,6 +91,11 @@ a{
   text-decoration: none;
   margin-right: 1rem;
 }
+
+.img{
+  border-radius: 50%;
+}
+
 
 .links{
   position: absolute;
@@ -75,13 +109,14 @@ a{
     font-size: 2rem;
     display: block;
   }
+
   @media(min-width: 768px){
     position: initial;
     margin: 0;
     a{
       font-size: 1rem;
-      color: white;
-      display: inline;
+      color: #c72929;
+      display:inline-block;
     }
     display: block;
 
@@ -101,7 +136,7 @@ a{
   a{
     font-size: 2rem;
     margin-top: 1rem;
-    color: white;
+    color: #c72929;
    }
   
 }
@@ -112,7 +147,10 @@ a{
 }
 
 
+
 } `
+
+
 
 const BgDiv = styled.div`
 background-color: #222;
@@ -131,4 +169,7 @@ transition: all .6s ease ;
   width: 100%;
   height: 100%;
 } 
+
+
 `
+
