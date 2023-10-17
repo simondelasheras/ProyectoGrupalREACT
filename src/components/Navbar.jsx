@@ -43,9 +43,10 @@ function Navbar() {
 </NavDropdown>
 
 <NavDropdown title= "Rutin">
-<NavDropdown.Item href="Products/tea">Tea</NavDropdown.Item>
-<NavDropdown.Item href="Products/coffe">Coffe</NavDropdown.Item>
-<NavDropdown.Item href="Products/chocolate">Chocolate</NavDropdown.Item>
+<NavDropdown.Item href="Products/curso1">Curso 1</NavDropdown.Item>
+<NavDropdown.Item href="Products/curso2">Curso 2</NavDropdown.Item>
+<NavDropdown.Item href="Products/curso 3">Curso 3</NavDropdown.Item>
+<NavDropdown.Item href="Products/curso 4">Curso 4</NavDropdown.Item>
 </NavDropdown>
 
               
